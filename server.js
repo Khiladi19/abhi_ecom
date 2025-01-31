@@ -15,11 +15,16 @@ import cartRouter from './routes/cart.router.js'
 import addressRouter from './routes/address.router.js'
 import paymentRouter from './routes/payment.router.js'
 
+const allowedOrigins = [
+    "https://abhi-ecom-frontend-4pey.vercel.app",  
+    "https://abhi-ecom-frontend-4pey-dfh4369vy-khiladi19s-projects.vercel.app"
+];
 
 app.use(cors({
-    origin:"https://abhi-ecom-frontend-4pey.vercel.app",
+    origin:allowedOrigins,
     methods:["GET","POST","PUT","DELETE"],
     credentials:true,
+    allowedHeaders: ["Content-Type", "Authorization"]
 }))
 app.use(bodyParser.json())
 
