@@ -42,6 +42,6 @@ app.all('*',(req,res)=>{
 // port listen 
 app.listen(PORT,async()=>{
     await connectionToDB
-    `http://localhost:${Port}`
+    `http://localhost:${PORT}`
 })
 
