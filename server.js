@@ -20,7 +20,6 @@ app.use(cors({
     origin:"https://abhi-ecom-frontend-4pey.vercel.app",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true,
-    allowedHeaders: ["Content-Type", "Authorization"],
 }))
 app.use(bodyParser.json())
 
