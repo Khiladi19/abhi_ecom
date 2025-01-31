@@ -17,7 +17,7 @@ import paymentRouter from './routes/payment.router.js'
 
 
 app.use(cors({
-    origin:true,
+    origin:"https://abhi-ecom-frontend-pwyk3k65e-khiladi19s-projects.vercel.app",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))
