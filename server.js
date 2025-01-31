@@ -1,11 +1,13 @@
 import express from  'express'
 import connectionToDB from './conf/db.js'
 import bodyParser from 'express'
-import cors from 'cors'
-import {config} from 'dotenv';
-config();
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
+
+
 const app = express()
-const Port = process.env.Port 
+const PORT = process.env.PORT || 2000
 // router import 
 import userRouter from './routes/user.router.js'
 import productRouter from './routes/product.router.js'
@@ -38,7 +40,7 @@ app.all('*',(req,res)=>{
 
 
 // port listen 
-app.listen(Port,async()=>{
+app.listen(PORT,async()=>{
     await connectionToDB
     `http://localhost:${Port}`
 })
