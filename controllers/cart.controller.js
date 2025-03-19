@@ -6,9 +6,10 @@ export const addToCart = async (req, res) => {
   const { productId, title, price, qty, imgSrc } = req.body;
   const userId = req.user;
 
+  // checking if user have already cart
   let cart = await Cart.findOne({ userId });
 
-  if (!cart) {
+  if (!cart) {  
     cart = new Cart({ userId, items: [] });
   }
   const itemIndex = cart.items.findIndex(

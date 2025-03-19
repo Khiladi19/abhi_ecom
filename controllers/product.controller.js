@@ -61,12 +61,11 @@ export const getProduct = async (req,res)=>{
 
 
 // find product By Id
-
 export const getProductById = async (req,res)=>{
   const id = req.params.id
 
   try {
-
+    
     const product = await Product.findById(id)
     if(!product){
       res.status(401).json({
@@ -88,7 +87,6 @@ export const getProductById = async (req,res)=>{
 }
 
 // update Product By Id
-
 export const updateProductById = async (req,res)=>{
   const id = req.params.id
   try {
@@ -111,8 +109,8 @@ export const updateProductById = async (req,res)=>{
     })
   }
 }
-// delete Product By Id
 
+// delete Product By Id
 export const deleteProductById = async (req,res)=>{
   const id = req.params.id
   try {
