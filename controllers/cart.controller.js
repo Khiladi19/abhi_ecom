@@ -12,6 +12,8 @@ export const addToCart = async (req, res) => {
   if (!cart) {  
     cart = new Cart({ userId, items: [] });
   }
+
+  // Checking If the Product Is Already in the Cart
   const itemIndex = cart.items.findIndex(
     (item) => item.productId.toString() === productId
   );
