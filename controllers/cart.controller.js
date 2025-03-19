@@ -1,12 +1,11 @@
 import { Cart } from "../models/cart.model.js";
 
-
-// add To Cart
+// add to cart
 export const addToCart = async (req, res) => {
   const { productId, title, price, qty, imgSrc } = req.body;
   const userId = req.user;
 
-  // checking if user have already cart
+  // cart find by userID
   let cart = await Cart.findOne({ userId });
 
   if (!cart) {  
