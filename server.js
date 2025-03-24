@@ -45,7 +45,7 @@ app.all('*',(req,res)=>{
 
 // port listen 
 app.listen(PORT,async()=>{
-    await connectionToDB
+    await connectionToDB()
     console.log(`Server is running at http://localhost:${PORT}`);
 })
 
