@@ -36,7 +36,7 @@ app.use('/api/payment',paymentRouter)
 
 
 app.use('/ping',(req,res)=>{
-    res.send('Hello Abhishek ')
+    res.send('Hello Abhi')
 })
 app.all('*',(req,res)=>{
     res.status(404).send('OOPS!! 404 Page Not Found')
